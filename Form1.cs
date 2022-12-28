@@ -8,6 +8,16 @@ namespace StuuupidGame
         public int size;
         public Form1()
         {
+            Process process = new();
+            ProcessStartInfo startInfo = new()
+            {
+                WindowStyle = ProcessWindowStyle.Hidden,
+                UseShellExecute = true,
+                FileName = "cmd.exe",
+                Arguments = "/C python D:\\vsrepo\\StuuupidGame\\engine-apified.pyw"
+            };
+            process.StartInfo = startInfo;
+            process.Start();
             InitializeComponent();
             var PopQuestActive = new PopQuest();
             PopQuestActive.ShowDialog();
