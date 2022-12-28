@@ -1,5 +1,5 @@
-using System.Text.Json;
-using System.Text.Json.Serialization;
+using System.Diagnostics;
+using System.Net.Http.Json;
 
 namespace StuuupidGame
 {

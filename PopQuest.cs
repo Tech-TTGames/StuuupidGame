@@ -1,7 +1,4 @@
-﻿using System.Text.Json;
-using System.Text.Json.Serialization;
-
-namespace StuuupidGame
+﻿namespace StuuupidGame
 {
     public partial class PopQuest : Form
     {
