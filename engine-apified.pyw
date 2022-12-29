@@ -50,4 +50,4 @@ def move(direction: str):
     return json.dumps(data), 200
 
 if __name__ == '__main__':
-    api.run()
+    api.run(port=23500)
