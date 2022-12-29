@@ -5,9 +5,9 @@ namespace StuuupidGame
 {
     public partial class Form1 : Form
     {
+        public const string address = "http://127.0.0.1:5000";
         public int size;
         private static readonly HttpClient client = new();
-        public static string address = "http://127.0.0.1:5000";
         public Form1()
         {
             Process process = new();
