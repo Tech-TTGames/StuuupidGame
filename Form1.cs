@@ -18,7 +18,7 @@ namespace StuuupidGame
         public string? direction;
         public Form1()
         {
-            //StartServer();
+            StartServer();
             InitializeComponent();
             PopQuest PopQuestActive = new();
             PopQuestActive.ShowDialog();
