@@ -166,15 +166,16 @@ namespace StuuupidGame
                         win = true;
                     }
                     timer1.Stop();
-                    Summary alph = new Summary(gameData.score, win);
+                    Summary alph = new(gameData.score, win);
                     alph.ShowDialog();
                     if (alph.restart)
                     {
                         Form1_Load(timer1, new EventArgs());
                         return;
                     }
-                    srv.Close();
+                    srv.Kill();
                     Close();
+                    Environment.Exit(0);
 
                 }
                 pictureBox1.Invalidate();
