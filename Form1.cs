@@ -173,7 +173,7 @@ namespace StuuupidGame
                         Form1_Load(timer1, new EventArgs());
                         return;
                     }
-                    srv.Kill();
+                    srv.Kill(true);
                     Close();
                     Environment.Exit(0);
 
