@@ -52,12 +52,14 @@ namespace StuuupidGame
 
         private void StartServer()
         {
+            string exe_directory = Path.GetDirectoryName(Application.ExecutablePath);
+            string program_str = string.Join("/C ","python ",exe_directory,"\\engine-apified.pyw");
             ProcessStartInfo startInfo = new()
             {
                 WindowStyle = ProcessWindowStyle.Hidden,
                 UseShellExecute = true,
                 FileName = "cmd.exe",
-                Arguments = "/C python D:\\vsrepo\\StuuupidGame\\engine-apified.pyw"
+                Arguments = program_str
             };
             srv.StartInfo = startInfo;
             srv.Start();
