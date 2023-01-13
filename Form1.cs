@@ -63,7 +63,7 @@ namespace StuuupidGame
             };
             prep_srv.StartInfo = prep_srvInfo;
             prep_srv.Start();
-            string exe_directory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.Parent.FullName;
+            string exe_directory = Environment.CurrentDirectory;
             string program_str = string.Concat("/C python ", exe_directory, "\\engine-apified.pyw");
             prep_srv.WaitForExit();
             ProcessStartInfo startInfo = new()

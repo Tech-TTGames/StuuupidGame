@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32314.265
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StuuupidGame", "StuuupidGame.csproj", "{FEA82545-A130-410C-BDA6-634231D9AD56}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SGInstall", "..\SGInstall\SGInstall.vdproj", "{AA32C5F2-92B2-4E8D-9345-DFE005377846}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FEA82545-A130-410C-BDA6-634231D9AD56}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FEA82545-A130-410C-BDA6-634231D9AD56}.Release|x64.ActiveCfg = Release|x64
 		{FEA82545-A130-410C-BDA6-634231D9AD56}.Release|x64.Build.0 = Release|x64
+		{AA32C5F2-92B2-4E8D-9345-DFE005377846}.Debug|Any CPU.ActiveCfg = Debug
+		{AA32C5F2-92B2-4E8D-9345-DFE005377846}.Debug|x64.ActiveCfg = Debug
+		{AA32C5F2-92B2-4E8D-9345-DFE005377846}.Release|Any CPU.ActiveCfg = Release
+		{AA32C5F2-92B2-4E8D-9345-DFE005377846}.Release|x64.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
