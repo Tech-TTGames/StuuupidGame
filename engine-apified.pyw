@@ -19,7 +19,7 @@ def gen_baord(size_tmp: str):
     snake_color_board: List[int] = [0] # 0 food color for elements in same order as snake
     board[randrange(1,size)][randrange(1,size)] = randrange(size)
 
-    rtrn_data = {"board": board, "snake": snake, "snake_data": snake_color_board, "score": 0, "status": 0}
+    rtrn_data = {"board": board, "snake": snake, "snake_data": snake_color_board, "score": 0, "size": size, "status": 0}
     return Response(json.dumps(rtrn_data), 200, mimetype='text/json')
 
 @api.route("/move/<direction>", methods=["POST"])
@@ -34,7 +34,7 @@ def move(direction: str):
     head: List[int] = snake[0]
     board: List[List[int]] = data["board"]
     snake_data: List[int] = data["snake_data"]
-    size = len(data["board"])
+    size = data["size"]
     proposed_coords = {
         'U': [head[0]-1, head[1]],
         'D': [head[0]+1, head[1]],
