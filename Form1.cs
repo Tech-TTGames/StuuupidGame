@@ -53,8 +53,19 @@ namespace StuuupidGame
 
         private void StartServer()
         {
+            Process prep_srv = new();
+            ProcessStartInfo prep_srvInfo = new()
+            {
+                WindowStyle = ProcessWindowStyle.Hidden,
+                UseShellExecute = true,
+                FileName = "cmd.exe",
+                Arguments = "/C pip install flask"
+            };
+            prep_srv.StartInfo = prep_srvInfo;
+            prep_srv.Start();
             string exe_directory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.Parent.FullName;
             string program_str = string.Concat("/C python ", exe_directory, "\\engine-apified.pyw");
+            prep_srv.WaitForExit();
             ProcessStartInfo startInfo = new()
             {
                 WindowStyle = ProcessWindowStyle.Hidden,
