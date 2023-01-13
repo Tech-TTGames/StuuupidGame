@@ -48,12 +48,12 @@ def move(direction: str):
 
     if board[proposed_coords[0]][proposed_coords[1]] != -1:
         data['score'] += 1
-        if data["score"] >= (size**2)-1:
-            data['status'] = 1
-            return Response(json.dumps(data), 200, mimetype="text/json")
         snake.insert(0, proposed_coords)
         snake_data.insert(0, board[proposed_coords[0]][proposed_coords[1]])
         board[proposed_coords[0]][proposed_coords[1]] = -1
+        if data["score"] >= (size**2)-1:
+            data['status'] = 1
+            return Response(json.dumps(data), 200, mimetype="text/json")
         while True:
             choice_loc = [randrange(size),randrange(size)]
             if choice_loc not in snake:
