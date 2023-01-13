@@ -15,9 +15,13 @@ def gen_baord(size_tmp: str):
     # -1 means empty, food color otherwise, snake is not represented on the board
     size = int(size_tmp)
     board: List[List[int]] = [[-1 for x in range(size)] for y in range(size)]
-    snake: List[List[int]] = [[0, 0]] # (y, x)
+    snake: List[List[int]] = [[randrange(size),randrange(size)]] # (y, x)
     snake_color_board: List[int] = [0] # 0 food color for elements in same order as snake
-    board[randrange(1,size)][randrange(1,size)] = randrange(size)
+    while True:
+            choice_loc = [randrange(size),randrange(size)]
+            if choice_loc not in snake:
+                break
+    board[choice_loc[0]][choice_loc[1]] = randrange(size)
 
     rtrn_data = {"board": board, "snake": snake, "snake_data": snake_color_board, "score": 0, "size": size, "status": 0}
     return Response(json.dumps(rtrn_data), 200, mimetype='text/json')
