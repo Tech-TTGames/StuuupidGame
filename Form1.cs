@@ -52,8 +52,8 @@ namespace StuuupidGame
 
         private void StartServer()
         {
-            string exe_directory = Path.GetDirectoryName(Application.ExecutablePath);
-            string program_str = string.Join("/C python ",exe_directory,"\\engine-apified.pyw");
+            string exe_directory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.Parent.FullName;
+            string program_str = string.Join(null,"/C python ",exe_directory,"\\engine-apified.pyw");
             ProcessStartInfo startInfo = new()
             {
                 WindowStyle = ProcessWindowStyle.Hidden,
