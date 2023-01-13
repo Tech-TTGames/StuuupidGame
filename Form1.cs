@@ -175,12 +175,13 @@ namespace StuuupidGame
                 if (gameData.status != 0)
                 {
                     bool win = false;
-                    if (gameData.status == 1){
+                    if (gameData.status == 1)
+                    {
                         win = true;
                         pictureBox1.Invalidate();
                     }
                     timer1.Stop();
-                    Summary alph = new(gameData.score, (gameData.size*gameData.size)-1, win);
+                    Summary alph = new(gameData.score, (gameData.size * gameData.size) - 1, win);
                     alph.ShowDialog();
                     if (alph.restart)
                     {

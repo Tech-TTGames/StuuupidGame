@@ -4,7 +4,7 @@ namespace StuuupidGame
     public partial class Summary : Form
     {
         public bool restart;
-        public Summary(int score,int size, bool win = false)
+        public Summary(int score, int size, bool win = false)
         {
             InitializeComponent();
             label3.Text = string.Concat(score, "/", size);
