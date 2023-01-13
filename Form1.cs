@@ -67,7 +67,7 @@ namespace StuuupidGame
 
         private static GameData Request(string endpoint, GameData? PostData = null)
         {
-            GameData result;
+            GameData? result;
             if (PostData == null)
             {
                 var resultTask = client.GetFromJsonAsync<GameData>(string.Join('/', address, endpoint));
@@ -93,7 +93,7 @@ namespace StuuupidGame
 
         private void Field_Draw(Graphics g, (int, int) location, int colorid, bool border = false)
         {
-            Rectangle rect = new Rectangle(location.Item2 * ppg, location.Item1 * ppg, ppg, ppg);
+            Rectangle rect = new(location.Item2 * ppg, location.Item1 * ppg, ppg, ppg);
             g.FillRectangle(drawingTools[colorid], rect);
             if (border)
             {
