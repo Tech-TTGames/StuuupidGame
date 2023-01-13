@@ -4,10 +4,10 @@ namespace StuuupidGame
     public partial class Summary : Form
     {
         public bool restart;
-        public Summary(int score, bool win = false)
+        public Summary(int score,int size, bool win = false)
         {
             InitializeComponent();
-            label3.Text = score.ToString();
+            label3.Text = string.Concat(score, "/", size);
             if (win)
             {
                 label1.Text = "YOU WIN";

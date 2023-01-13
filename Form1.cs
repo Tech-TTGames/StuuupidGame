@@ -43,6 +43,7 @@ namespace StuuupidGame
         public class GameData
         {
             public int score { get; set; } = 0;
+            public int size { get; set; } = 0;
             public List<List<int>> board { get; set; } = new();
             public List<List<int>> snake { get; set; } = new();
             public List<int> snake_data { get; set; } = new();
@@ -168,7 +169,7 @@ namespace StuuupidGame
                         pictureBox1.Invalidate();
                     }
                     timer1.Stop();
-                    Summary alph = new(gameData.score, win);
+                    Summary alph = new(gameData.score, (gameData.size*gameData.size)-1, win);
                     alph.ShowDialog();
                     if (alph.restart)
                     {
